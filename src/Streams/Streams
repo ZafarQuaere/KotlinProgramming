@@ -1,0 +1,11 @@
+What are Streams?
+You can think of Streams as an abstract layer over a sequence of elements to
+perform aggregate operations.
+Confused? Let's take a code example and then try to understand:
+
+fun main(args: Array<String>) {
+val stream = 1.rangeTo(10).asSequence().asStream()
+val resultantList = stream.skip(5).collect(Collectors.toList())
+println(resultantList)
+}
+OUtput : 6,7,8,9,10

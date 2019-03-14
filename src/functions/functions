@@ -1,0 +1,17 @@
+** A function is a block of organized, reusable code that is used to perform a single,
+    related action.
+
+1) Functions allow us to break the program into a bunch of steps and substeps
+2) Functions encourages code reuse
+3) Functions, if used properly, help us keep the code clean, organized, and easy to understand
+4) Functions make testing (unit testing) easy, testing each small part of the program is easier
+   than the complete program in a single go.
+
+The definition of a pure function says that, if the return value of a function is completely dependent
+on its arguments/parameters, then this function may be referred to as a pure function.
+
+The definition also says that a pure function should not actively or passively cause side effects, that
+is, it should not directly cause side effects, nor should it call any other function that causes side
+effects.
+
+

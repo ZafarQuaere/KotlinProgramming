@@ -1,0 +1,31 @@
+Collections and Data Operations in Kotlin
+Kotlin inherits collections framework from Java, but has significant changes from it in
+favor of functional programming
+
+
+The collections framework is a set of classes and interfaces that provides a unified architecture
+for performing common groups of data related operations, such as the following:
+
+Searching
+Sorting
+Insertion
+Deletion
+Manipulation
+
+All collections frameworks contain the following things:
+
+Interfaces:     These are abstract data types are used to represent collections. Interfaces
+allow collections to be manipulated independent of the details of their representation. In
+object-oriented languages, these are generally interfaces form a hierarchy.
+
+Implementations:    These are concrete implementations of the collection of interfaces. In
+essence, these are reusable data structures.
+
+Algorithms:     Methods that perform useful computations, such as searching and sorting (as
+listed earlier), on objects that implement collection interfaces. These algorithms are said
+to be polymorphic. The same method can be used on many different implementations of the
+appropriate collection interface. In short, algorithms are a reusable functionality.
+
+
+**The collections framework internally uses hashCode() and equals() functions to perform equality checks while
+adding items to the set values and they are missing from the custom class.

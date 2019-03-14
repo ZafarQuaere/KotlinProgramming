@@ -1,0 +1,9 @@
+Lambda, which can also be called anonymous functions, has a first-class citizen support in
+Kotlin.
+
+A high order function is a function which accepts another function as a parameter or returns another
+function. We just saw how we can use a function as a property, so it's quite easy to see that we can
+accept another function as a parameter or that we can return another function from a function.
+
+The definition of a pure function says that, if the return value of a function is completely dependent
+on its arguments/parameters, then this function may be referred to as a pure function.

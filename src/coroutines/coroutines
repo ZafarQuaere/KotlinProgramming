@@ -1,0 +1,28 @@
+What is a coroutine?
+Basically, a coroutine is a very light thread that runs a block of code
+and has a similar life cycle, but can complete with a return value or an exception.
+
+Technically,
+a coroutine is an instance of a suspendable computation, a computation that may suspend.
+
+Coroutines
+aren't bound to a particular thread and can suspend in one Thread and resume execution in a different
+one:
+========================================
+
+runBlocking: This function creates a coroutine and blocks the current Thread until the coroutine
+finishes, returning its result value (Unit in this case).
+
+launch: This function creates a new coroutine without blocking the current Thread and
+returns Job (ignored here).
+
+delay: This function is a suspending (more on this later) function that delays the current
+coroutine without blocking the current thread.
+
+suspend: A suspending function is a function that may suspend the execution of a coroutine,
+without blocking the current Thread; therefore a suspending function must be called inside a
+
+coroutine—it can't be invoked from normal code. The function must be marked with the
+suspend modifier. So, delay can be invoked inside runBlocking and launch, both functions
+(among others) take a suspending lambda as the last parameter—a suspending lambda is a
+lambda marked with the suspend modifier.

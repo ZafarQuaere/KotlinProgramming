@@ -1,0 +1,16 @@
+Functional programming ==>
+is a paradigm (a style of structuring your programs). In essence, the
+focus is on transforming data with expressions (ideally such expressions should not have side
+effects). Its name, functional, is based on the concept of a mathematical function
+(not in subroutines,methods, or procedures).
+
+A mathematical function defines a relation between a set of
+inputs and outputs. Each input has just one output. For example, given a function, f(x) = X ; f(5) is
+always 25.
+
+fun f(x: Long) : Long {
+return x * x // no access to external state
+}
+
+
+First-class and higher-order functions

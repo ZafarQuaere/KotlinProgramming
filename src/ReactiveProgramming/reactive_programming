@@ -1,0 +1,7 @@
+RxKotlin revolves around the Observable type that represents a system of real-life events and data, 's
+now break these things down sequentially to understand it better:
+1) Observer subscribes to Observable
+2) Observable starts emitting the items that it has in it
+3) Observer reacts to whatever item the Observable emits
+
+== Learn concept of RX from https://medium.freecodecamp.org/rxandroid-and-kotlin-part-1-f0382dc26ed8
