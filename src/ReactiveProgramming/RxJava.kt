@@ -1,10 +1,8 @@
 package com.example.kotlin.ReactiveProgramming
 
-import android.annotation.SuppressLint
 import io.reactivex.rxkotlin.subscribeBy
 import io.reactivex.rxkotlin.toObservable
 
-@SuppressLint("CheckResult")
 fun main(args: Array<String>) {
     var list : List<Any> = listOf(1,"Two",3,"Four","Five",5.5f) //1
     var iterator = list.iterator()
