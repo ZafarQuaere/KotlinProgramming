@@ -8,4 +8,4 @@ val stream = 1.rangeTo(10).asSequence().asStream()
 val resultantList = stream.skip(5).collect(Collectors.toList())
 println(resultantList)
 }
-OUtput : 6,7,8,9,10
+Output : 6,7,8,9,10
