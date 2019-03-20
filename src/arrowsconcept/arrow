@@ -1,0 +1,23 @@
+Getting Started with Arrow
+Arrow (http://arrow-kt.io/) is a Kotlin library that provides functional constructs, datatypes, and
+other abstractions.
+Kotlin syntax is powerful and flexible, and Arrow takes advantage of it to offer
+features that don't come as standard.
+
+Arrow is the result of combining the two most successful and popular functional libraries,
+funKTionale and Kategory, into one.
+
+In this chapter, we'll cover how to use existing functions to build new and richer functions. Some of
+the topics that we'll cover are as follows:
+
+Function composition
+Partial application
+Currying
+Memoization
+Pipes
+Optics
+
+Function        -->  Description
+compose         -->  Takes the result of invoking the right-hand function as the parameter for the left-hand function.
+forwardCompose  -->  Takes the result of invoking the left-hand function as the parameter for the right-hand function.
+andThen         -->  Is an alias for forwardCompose
