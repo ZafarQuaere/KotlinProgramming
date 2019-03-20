@@ -1,5 +1,5 @@
-What are Streams?
-You can think of Streams as an abstract layer over a sequence of elements to
+What are streams?
+You can think of streams as an abstract layer over a sequence of elements to
 perform aggregate operations.
 Confused? Let's take a code example and then try to understand:
 
