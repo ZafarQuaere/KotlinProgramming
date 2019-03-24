@@ -1,9 +1,6 @@
 package com.example.kotlin.dsl
 
 
-
-
-
 /*<bicycle description="Fast carbon commuter">
 <bar material="ALUMINIUM" type="FLAT"></bar>
 <frame material="CARBON">
@@ -36,8 +33,6 @@ abstract class Part(private val name: String) : Element {
         children.add(element)
         return element
     }
-
-
 
     override fun render(builder: StringBuilder, indent: String) {
         builder.append("$indent<$name${renderAttributes()}>\n")
