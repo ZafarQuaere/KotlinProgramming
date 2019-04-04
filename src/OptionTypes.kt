@@ -1,6 +1,7 @@
+/*
 package com.example.kotlin
 
-import arrow.core.*
+//import arrow.core.*
 
 fun divide(num: Int, den: Int): Int? {
     return if (num % den != 0) {
@@ -15,7 +16,7 @@ fun division(a: Int, b: Int, den: Int): Pair<Int, Int>? {
     return when (aDiv) {
         is Int -> {
             val bDiv = divide(b, den)
-            when (bDiv) {
+            when (bDiv) {is
                 is Int -> aDiv to bDiv
                 else -> null
             }
@@ -45,6 +46,7 @@ fun optionDivision(a: Int, b: Int, den: Int): Option<Pair<Int, Int>> {
     }
 }
 
+*/
 /*
 fun flatMapDivision(a: Int, b: Int, den: Int): Option<Pair<Int, Int>> {
     return optionDivide(a, den).flatMap { aDiv: Int ->
@@ -53,3 +55,4 @@ fun flatMapDivision(a: Int, b: Int, den: Int): Option<Pair<Int, Int>> {
         }
     }
 }*/
+
