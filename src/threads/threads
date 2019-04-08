@@ -1,0 +1,3 @@
+Synchronous : You wait for it to finish before moving to another task .
+Asynchronous : You can move onto another task before it finishes.
+
