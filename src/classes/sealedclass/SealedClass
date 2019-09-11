@@ -1,0 +1,22 @@
+Sealed Class :
+https://android.jlelse.eu/kotlin-what-is-a-sealed-classe-1e535c416519
+
+It’s a kind of ADT(Algebraic Data Type), used for representing restricted class hierarchies, also allowing a datatype to be one of a predefined set of types.
+
+In Kotlin context we can also use sealed classes combined with when expression. Allowing compiler to verify all branch statements, making the statement else unnecessary.
+
+An example of that:
+sealed class Intention {
+  class Refresh : Intention() 
+  class LoadMore : Intention()
+}
+fun main(args: Array<String>) {
+  val intention: Intention = Intention.LoadMore()
+  val output = when (intention) {
+    is Intention.Refresh -> "refresh"
+    is Intention.LoadMore -> "load more"
+  }
+  println(output)
+}
+Maybe you’re asking yourself: “Does the sealed classes have the same behavior as enum classes?” The answer is almost yes.
+

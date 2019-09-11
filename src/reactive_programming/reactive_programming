@@ -5,3 +5,11 @@ now break these things down sequentially to understand it better:
 3) Observer reacts to whatever item the Observable emits
 
 == Learn concept of RX from https://medium.freecodecamp.org/rxandroid-and-kotlin-part-1-f0382dc26ed8
+https://www.androidhive.info/RxJava/android-getting-started-with-reactive-programming/
+
+
+In Rx, the subscriber implements three methods to interact with observable:
+
+1) onNext(Data):        Receives the data from the observable
+2) onError(Exception):  Gets called if an exception is thrown
+3) onCompleted():       Gets called when the data stream ends

@@ -1,4 +1,11 @@
-What is a coroutine?
+https://blog.mindorks.com/mastering-kotlin-coroutines-in-android-step-by-step-guide
+
+What are Coroutines?
+Coroutines = Co + Routines
+
+Here, Co means cooperation and Routines means functions.
+It means that when functions cooperate with each other, we call it as Coroutines.
+
 Basically, a coroutine is a very light thread that runs a block of code
 and has a similar life cycle, but can complete with a return value or an exception.
 
@@ -8,21 +15,49 @@ a coroutine is an instance of a suspendable computation, a computation that may 
 Coroutines
 aren't bound to a particular thread and can suspend in one Thread and resume execution in a different
 one:
-========================================
+==================================================================================================
+A few of the possibilities are as follows:
+
+It can execute a few lines of functionA and then execute a few lines of functionB and then again a few lines of functionA and so on.
+This will be helpful when a thread is sitting idle not doing anything, in that case, it can execute a few lines of another function.
+This way, it can take the full advantage of thread. Ultimately the cooperation helps in the multitasking.
+
+It will enable writing asynchronous code in a synchronous way. We will talk about this later in this article.
+
+Overall, the Coroutines make the multitasking very easy.
+
+So, we can say that Coroutines and the threads both are multitasking. But the difference is that threads are managed by the OS and
+coroutines by the users as it can execute a few lines of function by taking advantage of the cooperation.
+****************************************************************************************************************************
+Now, you can understand the below paragraph, what the official website of Kotlin says
+
+One can think of a coroutine as a light-weight thread. Like threads, coroutines can run in parallel, wait for each other and communicate.
+The biggest difference is that coroutines are very cheap, almost free: we can create thousands of them, and pay very little in terms
+of performance. True threads, on the other hand, are expensive to start and keep around. A thousand threads can be a serious challenge
+for a modern machine.
+
+There are two functions in Kotlin to start the coroutines which are as follows:
+
+launch{}
+async{}
+Launch vs Async in Kotlin Coroutines
+The difference is that the launch{} does not return anything and the async{}returns an instance of Deferred<T>, which has an await()function
+that returns the result of the coroutine like we have future in Java in which we do future.get() to the get the result.
+
+
+****************************************************************************************************************************
+
+
 
 runBlocking: This function creates a coroutine and blocks the current Thread until the coroutine
 finishes, returning its result value (Unit in this case).
 
-launch: This function creates a new coroutine without blocking the current Thread and
-returns Job (ignored here).
+launch: This function creates a new coroutine without blocking the current Thread and returns Job (ignored here).
 
-delay: This function is a suspending (more on this later) function that delays the current
-coroutine without blocking the current thread.
+delay: This function is a suspending (more on this later) function that delays the current coroutine without blocking the current thread.
 
 suspend: A suspending function is a function that may suspend the execution of a coroutine,
-without blocking the current Thread; therefore a suspending function must be called inside a
-
-coroutine—it can't be invoked from normal code. The function must be marked with the
-suspend modifier. So, delay can be invoked inside runBlocking and launch, both functions
-(among others) take a suspending lambda as the last parameter—a suspending lambda is a
-lambda marked with the suspend modifier.
+without blocking the current Thread; therefore a suspending function must be called inside a coroutine—it can't be invoked from normal code.
+The function must be marked with the suspend modifier. So, delay can be invoked inside runBlocking and launch,
+both functions(among others) take a suspending lambda as the last parameter—
+a suspending lambda is a lambda marked with the suspend modifier.
