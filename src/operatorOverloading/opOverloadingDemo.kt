@@ -10,7 +10,41 @@ class Wolf(var name : String){
 
 class Pack(val members : Map<String,Wolf>)
 
+class Alien{
+    var skills = ""
+    fun show(){
+        println(skills)
+    }
+}
+
 fun main(args: Array<String>) {
+  // example1()
+    example2()
+
+}
+
+fun example2() {
+    var a1 = Alien()
+    a1.skills = "Java"
+    a1.show()
+
+    var a2 = Alien()
+    a2.skills = "Kotlin"
+    a2.show()
+
+    //var a3 = a1 plus a2 // it was only infix and extension function
+    var a3 = a1 + a2 // it calling operator overloading function by adding operator keyword in the function.
+    a3.show();
+
+}
+
+private infix operator fun Alien.plus(a2: Alien): Alien {
+    var a3 = Alien()
+    a3.skills = this.skills +" "+a2.skills
+    return a3
+}
+
+private fun example1() {
     val wolfObj = Wolf("Kotlin")
     val packObj:Pack = wolfObj + Wolf("Coding") //wolfObj.plus(Wolf(...))
 
@@ -18,7 +52,6 @@ fun main(args: Array<String>) {
 
     operator fun Pack.plus(wolf: Wolf) = Pack(this.members.toMutableMap() + (wolf.name to wolf))
     var biggerPack = packObj + Wolf("Bad Wolf")
-
 }
 
 /*

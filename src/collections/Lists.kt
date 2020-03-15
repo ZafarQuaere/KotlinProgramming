@@ -2,7 +2,7 @@ package com.example.kotlin.collections
 
 fun main(args: Array<String>) {
     aboutImmutableList()
-    aboutMutableList()
+    //aboutMutableList()
 }
 
 fun aboutImmutableList() {
@@ -10,6 +10,13 @@ fun aboutImmutableList() {
     for (i in list){
         print(" $i  ")
     }
+    println()
+    val evens = list.filter { it % 2 == 0 } // it will fetch all the even values
+    evens.forEach { println(it) }
+    println()
+    val doubleValue = evens.map { it * 2 } // it will double the each values of even list
+    doubleValue.forEach { println(it) }
+
     println()
     //create empty list
     val emptyList1 = listOf<Any>()
@@ -29,6 +36,8 @@ fun aboutImmutableList() {
             "4th Item",
             "5th Item"
     )
+
+
     println("3rd Item on the list :: ${list1.get(2)}")
     println("4rd Item on the list :: ${list1[3]}")
 }
@@ -48,5 +57,8 @@ fun aboutMutableList() {
         println("for2 items $i")
     }
 
+    mutableList.forEach {
+        println(it)
+    }
 
 }

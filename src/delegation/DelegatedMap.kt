@@ -3,7 +3,7 @@ package com.example.kotlin.DelegationInKotlin
 import java.text.SimpleDateFormat
 import java.util.*
 
-data class Book (val mapDelegate:Map<String,Any?>) {
+private data class Book (val mapDelegate:Map<String,Any?>) {
     val name:String by mapDelegate
     val authors:String by mapDelegate
     val pageCount:Int by mapDelegate

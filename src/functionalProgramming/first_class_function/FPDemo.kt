@@ -20,7 +20,4 @@ fun main(args: Array<String>) {
 
 }
 
-fun f(x: Long): Long {
-    return x * x // doesnt accessing any external resources.
-
-}
+fun f(x: Long): Long = x * x

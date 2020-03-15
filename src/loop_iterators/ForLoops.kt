@@ -1,5 +1,7 @@
 package loop_iterators
 
+import com.example.kotlin.functionalCollections.numbers
+
 fun main(args: Array<String>) {
     val names = listOf("Zafar", "Imam", "Sani")
     //simple for looop
@@ -16,6 +18,8 @@ fun main(args: Array<String>) {
     for (i in 0..10 step 2)
         println("Index: $i")
 
+    //for each loop
+    names.forEach({println(it)})
 
     println("============================================================")
     // for loop with downTo
@@ -26,7 +30,7 @@ fun main(args: Array<String>) {
     // for loop with index and value
     for ((index, value) in names.withIndex())
         println("Index: $index value:  $value")
-
+    
     for ((index) in names.withIndex())
         println("Index: $index ")
 
