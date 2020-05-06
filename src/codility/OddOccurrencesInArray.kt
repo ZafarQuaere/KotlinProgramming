@@ -37,12 +37,12 @@ fun findTheUnPairedValue(array: Array<Int>) {
     }*/
     for ( (i,v) in array.withIndex()){
         for ((j,vv) in array.withIndex()){
-            println("array[i] : ${array[i]}    array[j] : ${array[j+1]} " )
-         /*   if (array[v] == array[j+1]){
+           if (array[i] == array[j+1]){
+               println("array-i : ${array[i]}   array-j ${array[j+1]}  are equals")
                 break
             } else {
-                println("Unmatched value : $unmatchedValue")
-            }*/
+                unmatchedValue = array[i]
+            }
         }
     }
     println("Unmatched value $unmatchedValue ")

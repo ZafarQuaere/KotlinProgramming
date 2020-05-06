@@ -9,7 +9,7 @@ val capitalize = { str: String -> str.capitalize() }  //kotlin lambda expression
     }
 }*/
 
-fun reverse(str: String): String {
+private fun reverse(str: String): String {
     return str.reversed()
 }
 
@@ -22,12 +22,12 @@ fun main(args: Array<String>) {
 }
 
 //this is another method call higher order functions
-fun transform(str: String, fn: (String) -> String): String {
+ fun transform(str: String, fn: (String) -> String): String {
     return fn(str)
 }
 
 //now we can generalize transform
-fun <T> transform(t: T, fn: (T) -> T): T {
+private fun <T> transform(t: T, fn: (T) -> T): T {
     return t
 }
 
